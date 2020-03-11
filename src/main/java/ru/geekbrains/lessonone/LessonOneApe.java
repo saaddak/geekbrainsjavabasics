@@ -1,7 +1,12 @@
-package ru.geekbrains;
+package ru.geekbrains.lessonone;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import static ru.geekbrains.lessonone.PowerRanger.isInRange;
+import static ru.geekbrains.lessonone.Dummynator.dummy;
+import static ru.geekbrains.lessonone.Negotiante.isNonnegative;
+import static ru.geekbrains.lessonone.Diplomancer.sayMyName;
+import static ru.geekbrains.lessonone.Leapers.isItLeap;
 
 public class LessonOneApe {
     public static void main(String[] args) {
@@ -28,42 +33,5 @@ public class LessonOneApe {
         System.out.println("А високосный ли год 2021? " + isItLeap(2021) + "\n");
         System.out.println("Это я так, на всякий случай...\n" + "Високосный 2020-й? " + ((GregorianCalendar) Calendar.getInstance()).isLeapYear(2020));
         System.out.println("А 2021 - високосный? " + ((GregorianCalendar) Calendar.getInstance()).isLeapYear(2021));
-    }
-
-    static float dummy (float a, float b, float c, float d) {
-        return (a * (b + (c / d)));
-    }
-
-    static boolean isInRange(int a, int b) {
-        if((a + b) >= 10 && (a + b) <= 20) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    static boolean isNonnegative(int num) {
-        if(num >=0) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    static String sayMyName(String myName) {
-        if(myName.equals("Вернер Карл Гейзенберг") || myName.equals("Вернер Гейзенберг") || myName.equals("Карл Гейзенберг") || myName.equals("Гейзенберг") || myName.equals("Werner Karl Heisenberg") || myName.equals("Werner Heisenberg") || myName.equals("Karl Heisenberg") || myName.equals("Heisenberg")) {
-            return "Ты чертовски прав!";
-        } else {
-            return ("Привет, " + myName + "!");
-        }
-    }
-
-    static boolean isItLeap(int year) {
-        if (year % 4 == 0) {
-            if ((year % 100 != 0) || (year % 400 == 0)) {
-                return true;
-            }
-        }
-        return false;
     }
 }
